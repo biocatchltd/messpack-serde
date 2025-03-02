@@ -1,11 +1,10 @@
 [package]
-name = "rmp-serde"
-version = "1.3.0"
-authors = ["Evgeny Safronov <division494@gmail.com>"]
+name = "messpack-serde"
+version = "2.0.0"
+authors = ["Biocatch ltd <info@biocatch.com>"]
 license = "MIT"
 description = "Serde bindings for RMP"
-repository = "https://github.com/3Hren/msgpack-rust"
-documentation = "https://docs.rs/rmp-serde"
+repository = "https://github.com/biocatchltd/messpack-serde"
 readme = "README.md"
 keywords = ["msgpack", "MessagePack", "serde", "serialization"]
 categories = ["encoding"]
@@ -17,12 +16,9 @@ tag-prefix = "{{crate_name}}/"
 [dependencies]
 byteorder = "1.4.3"
 serde = "1.0.197"
-rmp = { version = "0.8.14", path = "../rmp" }
+rmp = "0.8.14"
 
 [dev-dependencies]
-rmpv = { path = "../rmpv" }
+rmpv = "1.3.0"
 serde_bytes = "0.11.5"
 serde = { version = "1.0.197", features = ["derive"] }
-
-[badges]
-maintenance = { status = "looking-for-maintainer" }
