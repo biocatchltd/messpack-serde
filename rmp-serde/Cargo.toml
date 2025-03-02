@@ -1,7 +1,7 @@
 [package]
 name = "messpack-serde"
 version = "2.0.0"
-authors = ["Biocatch ltd <biocatch.com>"]
+authors = ["Biocatch ltd <info@biocatch.com>"]
 license = "MIT"
 description = "Serde bindings for RMP"
 repository = "https://github.com/biocatchltd/messpack-serde"
