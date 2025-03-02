@@ -13,4 +13,4 @@ jobs:
         - name: build
           run: cargo build --release
         - name: publish
-          run: cargo publish --token ${{ secrets.CRATES_IO_TOKEN }}
+          run: cargo publish -p rmp-serde --token ${{ secrets.CRATES_IO_TOKEN }}
