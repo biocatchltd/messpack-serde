@@ -1,6 +1,5 @@
-#![doc = include_str!("../../README.md")]
 #![forbid(unsafe_code)]
-#![warn(missing_debug_implementations, missing_docs)]
+#![warn(missing_debug_implementations)]
 
 use std::fmt::{self, Display, Formatter};
 use std::str::{self, Utf8Error};
