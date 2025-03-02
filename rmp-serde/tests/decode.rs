@@ -5,9 +5,9 @@ use std::io::Cursor;
 use serde::de;
 use serde::Deserialize;
 
-use rmp::Marker;
 use messpack_serde::decode::{self, Error};
 use messpack_serde::{Deserializer, Raw, RawRef};
+use rmp::Marker;
 
 #[test]
 fn pass_nil() {

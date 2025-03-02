@@ -104,8 +104,7 @@ impl serde::Serializer for OnlyBytes {
         Err(Nope)
     }
 
-    fn serialize_some<T: ?Sized + Serialize>(self, _: &T) -> Result<u8, Nope>
-    {
+    fn serialize_some<T: ?Sized + Serialize>(self, _: &T) -> Result<u8, Nope> {
         Err(Nope)
     }
 
@@ -121,8 +120,11 @@ impl serde::Serializer for OnlyBytes {
         Err(Nope)
     }
 
-    fn serialize_newtype_struct<T: ?Sized + Serialize>(self, _: &'static str, _: &T) -> Result<u8, Nope>
-    {
+    fn serialize_newtype_struct<T: ?Sized + Serialize>(
+        self,
+        _: &'static str,
+        _: &T,
+    ) -> Result<u8, Nope> {
         Err(Nope)
     }
 
@@ -132,8 +134,7 @@ impl serde::Serializer for OnlyBytes {
         _: u32,
         _: &'static str,
         _: &T,
-    ) -> Result<u8, Nope>
-    {
+    ) -> Result<u8, Nope> {
         Err(Nope)
     }
 
@@ -198,8 +199,7 @@ impl serde::Serializer for OnlyBytes {
         Err(Nope)
     }
 
-    fn collect_str<T: ?Sized + fmt::Display>(self, _: &T) -> Result<u8, Nope>
-    {
+    fn collect_str<T: ?Sized + fmt::Display>(self, _: &T) -> Result<u8, Nope> {
         Err(Nope)
     }
 }

@@ -1004,12 +1004,11 @@ impl<'a, W: Write + 'a> serde::Serializer for &mut ExtFieldSerializer<'a, W> {
     }
 
     #[inline]
-    fn serialize_newtype_struct<T: ?Sized  + Serialize>(
+    fn serialize_newtype_struct<T: ?Sized + Serialize>(
         self,
         _name: &'static str,
         _value: &T,
-    ) -> Result<Self::Ok, Self::Error>
-    {
+    ) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected i8 and bytes"))
     }
 
@@ -1019,8 +1018,7 @@ impl<'a, W: Write + 'a> serde::Serializer for &mut ExtFieldSerializer<'a, W> {
         _idx: u32,
         _variant: &'static str,
         _value: &T,
-    ) -> Result<Self::Ok, Self::Error>
-    {
+    ) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected i8 and bytes"))
     }
 
@@ -1030,8 +1028,7 @@ impl<'a, W: Write + 'a> serde::Serializer for &mut ExtFieldSerializer<'a, W> {
     }
 
     #[inline]
-    fn serialize_some<T: ?Sized  + Serialize>(self, _value: &T) -> Result<Self::Ok, Self::Error>
-    {
+    fn serialize_some<T: ?Sized + Serialize>(self, _value: &T) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected i8 and bytes"))
     }
 
@@ -1198,8 +1195,7 @@ impl<'a, W: Write + 'a> serde::ser::Serializer for &mut ExtSerializer<'a, W> {
         self,
         _name: &'static str,
         _value: &T,
-    ) -> Result<Self::Ok, Self::Error>
-    {
+    ) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected tuple"))
     }
 
@@ -1210,8 +1206,7 @@ impl<'a, W: Write + 'a> serde::ser::Serializer for &mut ExtSerializer<'a, W> {
         _idx: u32,
         _variant: &'static str,
         _value: &T,
-    ) -> Result<Self::Ok, Self::Error>
-    {
+    ) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected tuple"))
     }
 
@@ -1221,8 +1216,7 @@ impl<'a, W: Write + 'a> serde::ser::Serializer for &mut ExtSerializer<'a, W> {
     }
 
     #[inline]
-    fn serialize_some<T: ?Sized + Serialize>(self, _value: &T) -> Result<Self::Ok, Self::Error>
-    {
+    fn serialize_some<T: ?Sized + Serialize>(self, _value: &T) -> Result<Self::Ok, Self::Error> {
         Err(Error::InvalidDataModel("expected tuple"))
     }
 
